@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\IGenericCache.cs" />
-    <Compile Include="DictionaryExtension.cs" />
     <Compile Include="Cache\GenericCache.cs" />
     <Compile Include="FetchData.cs" />
     <Compile Include="IDataDownloader.cs" />

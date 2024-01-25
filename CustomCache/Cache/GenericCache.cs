@@ -14,12 +14,12 @@ namespace CustomCache.Cache
 
         public TValue GetData(TKey key, Func<TKey, TValue> downloadData)
         {
-            if(Dict.ContainsKey(key))
+            if(!Dict.ContainsKey(key))
             {
-                return Dict[key];
+                Dict[key] = downloadData(key);
             }
 
-            return Dict.GetAndAddIfNotExists(key, downloadData(key));
+            return Dict[key];
         }
     }
 }

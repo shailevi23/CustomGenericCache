@@ -21,6 +21,7 @@ namespace CustomCache
         {
             foreach (T value in list)
             {
+                //need to decouple Console from this class using ConsoleUI class and add DI using _userInterface.
                 Console.WriteLine(_cache.GetData(value, val => _dataDownloader.DownloadData(val)));
             }
         }
